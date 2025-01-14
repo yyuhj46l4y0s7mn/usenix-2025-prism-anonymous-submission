@@ -1,0 +1,28 @@
+[package]
+name = "metric-collector"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "metric-collector"
+path = "src/main.rs"
+
+[lib]
+name = "collector"
+path = "src/lib.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4", features = ["derive", "cargo"]}
+chrono = "0.4.33"
+ctrlc = "3.4.2"
+eyre = "0.6.12"
+regex = "1.10.3"
+indoc = "2.0.4"
+libc = "0.2.153"
+nix = { version = "0.28.0", features = ["time"] }
+lru = "0.12.3"
+tempdir = "0.3.7"
+lru_time_cache = "0.11.11"
+lazy_static = "1.5.0"
